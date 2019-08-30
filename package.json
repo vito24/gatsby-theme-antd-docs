@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "yarn workspace example start",
+    "build": "yarn workspace example build"
+  },
+  "workspaces": [
+    "gatsby-theme-antd-docs",
+    "example"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "name": "gatsby-theme-antd-docs",
+  "version": "0.1.0",
+  "main": "index.js",
+  "author": "vito24 <sunhan.win@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "gatsby",
+    "gatsby theme",
+    "react",
+    "ant design",
+    "docs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vito24/gatsby-theme-antd-docs"
+  },
+  "bugs": {
+    "url": "https://github.com/vito24/gatsby-theme-antd-docs/issues"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.6.0"
+  },
+  "dependencies": {
+    "antd": "^3.22.0",
+    "classnames": "^2.2.6",
+    "delegate": "^3.2.0",
+    "docsearch.js": "^2.6.3",
+    "gatsby-plugin-antd": "^2.0.2",
+    "gatsby-plugin-less": "^3.0.1",
+    "gatsby-plugin-sharp": "^2.2.13",
+    "gatsby-remark-prismjs": "^3.3.6",
+    "gatsby-source-filesystem": "^2.1.10",
+    "gatsby-transformer-remark-antd": "^1.0.0",
+    "gatsby-transformer-sharp": "^2.2.7",
+    "less": "^3.10.2",
+    "lz-string": "^1.4.4",
+    "moment": "^2.24.0",
+    "nprogress": "^0.2.0",
+    "prismjs": "^1.17.1",
+    "prop-types": "^15.7.2",
+    "rc-drawer-menu": "^1.1.0",
+    "rc-queue-anim": "^1.8.0",
+    "rc-tween-one": "^2.6.0",
+    "react-copy-to-clipboard": "^5.0.1",
+    "react-document-title": "^2.0.3",
+    "react-intl": "^2.9.0",
+    "react-media": "^1.9.2"
+  }
+}
