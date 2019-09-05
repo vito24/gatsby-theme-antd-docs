@@ -1,7 +1,6 @@
 const { resolve } = require("path");
 
 module.exports = async ({ graphql, actions }, themeConfig) => {
-  console.log('^^^^themeConfig^^^^', themeConfig)
   const { createPage, createRedirect } = actions;
 
   const docsTemplate = resolve(__dirname, "../src/templates/docs.js");
@@ -90,6 +89,14 @@ module.exports = async ({ graphql, actions }, themeConfig) => {
   const indexTemplate = resolve(__dirname, "../src/templates/home.js");
 
   createPage({
+    path: "/",
+    component: indexTemplate,
+    context: {
+      themeConfig
+    }
+  });
+
+  createPage({
     path: "/index",
     component: indexTemplate,
     context: {
@@ -105,7 +112,6 @@ module.exports = async ({ graphql, actions }, themeConfig) => {
     }
   });
 
-  // Redirect /index.html to root.
   createRedirect({
     fromPath: "/",
     redirectInBrowser: true,
