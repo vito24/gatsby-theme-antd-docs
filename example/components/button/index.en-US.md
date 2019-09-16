@@ -3,7 +3,6 @@ category: Components
 type: General
 title: Button
 order: 1
-cols: 1
 ---
 
 ## API

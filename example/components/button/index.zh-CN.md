@@ -4,7 +4,6 @@ type: 通用
 title: Button
 subtitle: 按钮
 order: 1
-cols: 1
 ---
 
 ## API
