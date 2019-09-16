@@ -134,7 +134,7 @@ export const pageQuery = graphql`
               zh_CN
               en_US
             }
-            cols
+            col
             order
             subtitle
             type

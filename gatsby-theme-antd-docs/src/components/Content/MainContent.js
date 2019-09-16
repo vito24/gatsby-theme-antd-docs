@@ -11,7 +11,16 @@ import { isZhCN, getMenuItems } from '../utils';
 const { SubMenu } = Menu;
 
 function getActiveMenuItem(props) {
-  const { pathname } = props.location;
+  const {
+    location,
+    pathContext: {
+      themeConfig: { pathPrefix },
+    },
+  } = props;
+  let { pathname } = location;
+  if (pathPrefix && pathname.startsWith(pathPrefix)) {
+    pathname = pathname.replace(pathPrefix, '');
+  }
   return pathname.replace(/\//, '');
 }
 

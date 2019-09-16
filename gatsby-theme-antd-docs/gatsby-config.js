@@ -4,11 +4,6 @@ module.exports = options => {
   console.log('options', options);
 
   return {
-    siteMetadata: {
-      title: 'Blog Title Placeholder',
-      author: 'Name Placeholder',
-      description: 'Description placeholder',
-    },
     plugins: [
       {
         resolve: 'gatsby-plugin-less',
@@ -58,6 +53,13 @@ module.exports = options => {
                 noInlineHighlight: true,
               },
             },
+            {
+              resolve: `gatsby-remark-images`,
+              options: {
+                maxWidth: 786,
+              },
+            },
+            'gatsby-remark-copy-linked-files',
           ],
         },
       },

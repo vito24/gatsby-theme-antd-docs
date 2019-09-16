@@ -1,6 +1,6 @@
 const { resolve } = require("path");
 
-module.exports = async ({ graphql, actions }, themeConfig) => {
+module.exports = async ({ graphql, actions, pathPrefix }, themeConfig) => {
   const { createPage, createRedirect } = actions;
 
   const docsTemplate = resolve(__dirname, "../src/templates/docs.js");
@@ -34,6 +34,13 @@ module.exports = async ({ graphql, actions }, themeConfig) => {
   }
   const redirects = {};
 
+  const contextConfig = {
+    themeConfig: {
+      ...themeConfig,
+      pathPrefix
+    }
+  };
+
   const edges = allMarkdown.data.allMarkdownRemark.edges;
   edges.forEach(edge => {
     const { slug, underScoreCasePath, path: mdPath } = edge.node.fields;
@@ -65,7 +72,7 @@ module.exports = async ({ graphql, actions }, themeConfig) => {
             context: {
               slug,
               demo: `/${demoQuery}/demo/`,
-              themeConfig
+              ...contextConfig
             }
           });
         }
@@ -75,7 +82,7 @@ module.exports = async ({ graphql, actions }, themeConfig) => {
           context: {
             slug,
             demo: `/${demoQuery}/demo/`,
-            themeConfig
+            ...contextConfig
           }
         });
       };
@@ -91,25 +98,19 @@ module.exports = async ({ graphql, actions }, themeConfig) => {
   createPage({
     path: "/",
     component: indexTemplate,
-    context: {
-      themeConfig
-    }
+    context: contextConfig
   });
 
   createPage({
     path: "/index",
     component: indexTemplate,
-    context: {
-      themeConfig
-    }
+    context: contextConfig
   });
 
   createPage({
     path: "/index-cn",
     component: indexTemplate,
-    context: {
-      themeConfig
-    }
+    context: contextConfig
   });
 
   createRedirect({

@@ -40,7 +40,7 @@ function Banner(props) {
           <FormattedMessage id="app.home.slogan" />
         </p>
         <div key="button" className="button-wrapper">
-          <Link to={getLocalizedPathname('/docs/', isZhCN(location.pathname))}>
+          <Link to={getLocalizedPathname('/docs', isZhCN(location.pathname))}>
             <Button style={{ margin: '0 16px' }} type="primary" ghost>
               <FormattedMessage id="app.home.start" />
             </Button>

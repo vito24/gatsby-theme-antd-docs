@@ -19,13 +19,13 @@ function initDocSearch(locale, docSearchConfig = {}) {
     inputSelector: '#search-box input',
     algoliaOptions: { facetFilters: [`tags:${lang}`] },
     debug: false, // Set debug to true if you want to inspect the dropdown
-    ...docSearchConfig
+    ...docSearchConfig,
   });
 }
 
 class Header extends React.Component {
   state = {
-    menuVisible: false
+    menuVisible: false,
   };
 
   componentDidMount() {
@@ -80,13 +80,19 @@ class Header extends React.Component {
       );
   };
 
-  render() {
-    const { menuVisible } = this.state;
-    const { location, intl, isMobile } = this.props;
+  getActiveMenuItem = () => {
+    const {
+      location,
+      pathContext: {
+        themeConfig: { pathPrefix },
+      },
+    } = this.props;
     const path = location.pathname;
-    const menuMode = isMobile ? 'inline' : 'horizontal';
-
-    const module = location.pathname
+    let module = location.pathname;
+    if (pathPrefix && module.startsWith(pathPrefix)) {
+      module = module.replace(pathPrefix, '');
+    }
+    module = module
       .replace(/(^\/|\/$)/g, '')
       .split('/')
       .slice(0, -1)
@@ -94,11 +100,19 @@ class Header extends React.Component {
     let activeMenuItem = module || 'home';
     if (/^components/.test(path)) {
       activeMenuItem = 'components';
-    } else if (/docs/.test(path)) {
+    } else if (/^docs/.test(path)) {
       activeMenuItem = 'docs';
     } else if (path === '/') {
       activeMenuItem = 'home';
     }
+    return activeMenuItem;
+  };
+
+  render() {
+    const { menuVisible } = this.state;
+    const { intl, isMobile } = this.props;
+    const menuMode = isMobile ? 'inline' : 'horizontal';
+    const activeMenuItem = this.getActiveMenuItem();
 
     const isZhCN = intl.locale === 'zh-CN';
 

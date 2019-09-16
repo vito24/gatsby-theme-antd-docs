@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
+import { withPrefix, Link } from "gatsby";
 import { FormattedMessage } from 'react-intl';
 import LogoUrl from "../../../images/logo.svg";
 
@@ -12,7 +12,7 @@ function Logo(props) {
 
   return (
     <Link id="logo" to="/">
-      <img src={logo} alt="logo" />
+      <img src={withPrefix(logo)} alt="logo" />
       <FormattedMessage id="app.header.title" />
     </Link>
   );
