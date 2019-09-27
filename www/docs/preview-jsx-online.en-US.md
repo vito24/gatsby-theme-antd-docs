@@ -75,4 +75,4 @@ ReactDOM.render(
 
 Open your browser and visit http://127.0.0.1:8000/components/button
 
-<img src="/images/screenshots/button-en.png" alt="home screenshot" />
+![button-en screenshot](./screenshots/button-en.png)

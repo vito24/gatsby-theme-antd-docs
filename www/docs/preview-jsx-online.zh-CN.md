@@ -76,4 +76,4 @@ ReactDOM.render(
 
 然后打开浏览器访问 http://127.0.0.1:8000/components/button-cn
 
-<img src="/images/screenshots/button-zh.png" alt="home screenshot" />
+![button-zh screenshot](./screenshots/button-zh.png)

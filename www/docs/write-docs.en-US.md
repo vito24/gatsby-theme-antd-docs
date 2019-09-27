@@ -42,4 +42,4 @@ type: Introduction
 
 Open your browser and visit http://127.0.0.1:8000/docs/getting-started
 
-<img src="/images/screenshots/writing-articles-en.png" alt="home screenshot" />
+![writing-articles-en screenshot](./screenshots/writing-articles-en.png)

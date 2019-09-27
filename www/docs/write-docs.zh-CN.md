@@ -42,4 +42,4 @@ type: 入门
 
 然后打开浏览器访问 http://127.0.0.1:8000/docs/getting-started-cn
 
-<img src="/images/screenshots/writing-articles-zh.png" alt="home screenshot" />
+![writing-articles-zh screenshot](./screenshots/writing-articles-zh.png)

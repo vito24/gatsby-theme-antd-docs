@@ -32,6 +32,6 @@ gatsby develop
 
 然后打开浏览器访问 http://127.0.0.1:8000
 
-<img src="/images/screenshots/home.png" alt="home screenshot" />
+![home screenshot](./screenshots/home.png)
 
 就这么简单！
