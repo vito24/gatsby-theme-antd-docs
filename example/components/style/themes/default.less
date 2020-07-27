@@ -1,0 +1,89 @@
+@import "../color/index";
+
+@kr-prefix: kr;
+
+// color
+@primary-color: @blue-6;
+@error-color: @red-6;
+@white: #fff;
+@black: #000;
+
+@component-background: #fff;
+
+@font-size-base: 14px;
+@font-size-lg: @font-size-base + 2px;
+
+@text-color: fade(@black, 65%);
+
+@bg-color-base: hsv(0, 0, 96%);
+
+@disabled-color: fade(#000, 25%);
+@disabled-bg: @bg-color-base;
+
+@line-height-base: 1.5;
+
+// border
+@border-color-base: hsv(0, 0, 85%);
+@border-width-base: 1px;
+@border-style-base: solid;
+
+@border-radius-base: 4px;
+
+
+// animation
+@ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
+
+// vertical padding
+@padding-md: 16px;
+@padding-xs: 8px;
+
+// link
+@link-color: @primary-color;
+
+// ------ Components ------
+// Button
+@btn-font-weight: 400;
+@btn-border-width: @border-width-base;
+@btn-border-style: @border-style-base;
+@btn-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
+@btn-primary-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+@btn-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+
+@btn-height-base: 32px;
+@btn-height-sm: 24px;
+@btn-height-lg: 40px;
+
+@btn-padding-base: 0 @padding-md - 1px;
+@btn-padding-sm: 0 @padding-xs - 1px;
+@btn-padding-lg: @btn-padding-base;
+
+@btn-border-radius-base: @border-radius-base;
+
+@btn-default-color: @text-color;
+@btn-default-bg: #fff;
+@btn-default-border: @border-color-base;
+
+@btn-danger-color: #fff;
+@btn-danger-bg: @red-5;
+@btn-danger-border: @red-5;
+
+@btn-primary-color: #fff;
+@btn-primary-bg: @primary-color;
+
+@btn-disabled-color: @disabled-color;
+@btn-disabled-bg: @disabled-bg;
+@btn-disabled-border: @border-color-base;
+
+@btn-ghost-color: @text-color;
+@btn-ghost-bg: transparent;
+@btn-ghost-border: @border-color-base;
+
+@btn-font-size-base: @font-size-base;
+@btn-font-size-sm: @font-size-base;
+@btn-font-size-lg: @font-size-lg;
+
+@btn-circle-size: @btn-height-base;
+@btn-circle-size-lg: @btn-height-lg;
+@btn-circle-size-sm: @btn-height-sm;
+
+@btn-group-border: @blue-5;

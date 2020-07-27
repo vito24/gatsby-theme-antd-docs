@@ -1,0 +1,108 @@
+@import '../../style/themes/default';
+@import './mixin';
+
+@btn-prefix-cls: ~'@{kr-prefix}-btn';
+
+.@{btn-prefix-cls} {
+  line-height: @line-height-base;
+  .btn;
+  .btn-default;
+
+  // Make sure that the target of Button's click event always be `button`
+  > i,
+  > span {
+    display: inline-block;
+    pointer-events: none;
+  }
+
+  &-primary {
+    .btn-primary;
+  }
+
+  &-dashed {
+    .btn-dashed;
+  }
+
+  &-danger {
+    .btn-danger;
+  }
+
+  &-link {
+    .btn-link;
+  }
+
+  &-block {
+    width: 100%;
+  }
+
+  &-ghost {
+    .btn-ghost;
+  }
+
+  &-ghost&-primary {
+    //.btn-variant-ghost(@btn-primary-bg);
+    .btn-color(@btn-primary-bg; transparent; @btn-primary-bg);
+
+    text-shadow: none;
+
+    &:hover,
+    &:focus {
+      .btn-color(@blue-5; transparent; @blue-5);
+    }
+
+    &:active,
+    &.active {
+      .btn-color(@blue-7; transparent; @blue-7);
+    }
+
+    .btn-disabled();
+  }
+
+  &-ghost&-link {
+    .btn-color(@white; transparent; transparent);
+
+    text-shadow: none;
+
+    &:hover,
+    &:focus {
+      .btn-color(@blue-5; transparent; transparent);
+    }
+
+    &:active,
+    &.active {
+      .btn-color(@blue-7; transparent; transparent);
+    }
+
+    .btn-disabled();
+  }
+
+  &-ghost&-danger {
+    .btn-color(@btn-danger-bg; transparent; @btn-danger-bg);
+
+    text-shadow: none;
+
+    &:hover,
+    &:focus {
+      .btn-color(@red-4; transparent; @red-4);
+    }
+
+    &:active,
+    &.active {
+      .btn-color(@red-7; transparent; @red-7);
+    }
+
+    .btn-disabled();
+  }
+
+  &-circle {
+    .btn-circle();
+  }
+
+  &-round {
+    .btn-round();
+  }
+
+  &-group {
+    .btn-group();
+  }
+}
